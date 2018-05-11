@@ -15,13 +15,12 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/am_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="wrap_content" />
+    
     <com.mannysight.saybaba.view.AnimTabsView
         android:id="@+id/animTab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

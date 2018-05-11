@@ -2,6 +2,7 @@ package com.mannysight.saybaba.view;
 
 import android.animation.ArgbEvaluator;
 import android.content.Context;
+import android.support.annotation.AttrRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -27,21 +28,21 @@ public class AnimTabsView extends FrameLayout implements ViewPager.OnPageChangeL
     private int endsColor;
 
     public AnimTabsView(@NonNull Context context) {
-        super(context, null);
+        this(context, null);
     }
 
     public AnimTabsView(@NonNull Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs, 0);
-        init();
+        this(context, attrs, 0);
     }
 
-    public AnimTabsView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public AnimTabsView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
 
     private void init() {
-        LayoutInflater.from(getContext()).inflate(R.layout.view_anim_tabs, this, false);
+        LayoutInflater.from(getContext()).inflate(R.layout.view_anim_tabs, this, true);
         mCameraView = findViewById(R.id.center_image);
         mStartView = findViewById(R.id.left_chat);
         mEndView = findViewById(R.id.right_story);
