@@ -12,11 +12,16 @@
         android:layout_height="match_parent"
         tools:background="@color/light_grey" />
 
+    <TextureView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/am_view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    
+
     <com.mannysight.saybaba.view.AnimTabsView
         android:id="@+id/animTab"
         android:layout_width="match_parent"
